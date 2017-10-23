@@ -30,8 +30,8 @@ public class Contolador extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		Modelo m = new Modelo();
-		Boolean resultado = m.esValido(request.getParameter("txtUser"));
-		request.getSession().setAttribute("usuario", request.getParameter("txtUser"));
+		Boolean resultado = m.esValido(request.getParameter("txtUsuario"));
+		request.getSession().setAttribute("usuario", request.getParameter("txtUsuario"));
 		if(resultado==true){
 			RequestDispatcher r=request.getRequestDispatcher("LoginAceptado.jsp");
 			r.forward(request, response);
